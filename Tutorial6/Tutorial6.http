@@ -1,0 +1,52 @@
+@Tutorial6_HostAddress = http://localhost:5103
+
+### pobiera wszystkie zwierzeta
+GET {{Tutorial6_HostAddress}}/api/animals
+Accept: application/json
+
+### pobiera pojedyncze zwierze o id=1
+GET {{Tutorial6_HostAddress}}/api/animals/1
+Accept: application/json
+
+### wyszukuje zwierzeta po nazwie
+GET {{Tutorial6_HostAddress}}/api/animals/search?searchName=Lily
+Accept: application/json
+
+### tworzy nowe zwierze
+POST {{Tutorial6_HostAddress}}/api/animals
+Content-Type: application/json
+
+{
+  "name": "Molly",
+  "category": "Cat",
+  "weight": 3.25,
+  "furColor": "White"
+}
+
+### aktualizuje zwierze id=2
+PUT {{Tutorial6_HostAddress}}/api/animals/2
+Content-Type: application/json
+
+{
+  "name": "Raspberry",
+  "category": "Cat",
+  "weight": 4.13,
+  "furColor": "Black"
+}
+
+### usuwa zwierze id=1
+DELETE {{Tutorial6_HostAddress}}/api/animals/1
+
+### pobiera wizyty zwierzaka id=1
+GET {{Tutorial6_HostAddress}}/api/animals/1/visits
+Accept: application/json
+
+### tworzy nowa wizyte dla zwierzaka id=1
+POST {{Tutorial6_HostAddress}}/api/animals/1/visits
+Content-Type: application/json
+
+{
+  "date": "2025-05-10T10:00:00",
+  "description": "Dentist",
+  "price": 750
+}
