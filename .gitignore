@@ -399,3 +399,45 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Rider project settings
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# Rider caches
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# VS Code settings (if someone uses it too)
+.vscode/
+
+# Others
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
